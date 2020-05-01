@@ -1,0 +1,65 @@
+#signup-container
+{
+    width:100%;
+    padding-top:50px;
+    max-width: 100%;
+    height:auto;
+}
+
+.sign-headline
+{
+    width:100%;
+    height:300px;
+    max-height: 300px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signform-container
+{
+    width:100%;
+    height:auto;
+    box-sizing: border-box;
+
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+#signform
+{
+    width:384px;
+    max-width: 384px;
+    height:auto;
+    text-align: center;
+}
+
+#signform input {
+    width:260px;
+    max-width: 260px;
+    height:38px;
+    max-height: 40px;
+    outline:none;
+    border:0.3px solid black;
+    font-size:18px;
+}
+
+#signup-button {
+    width:180px;
+    height:38px;
+    max-height: 38px;
+    margin-top:10px;
+    font-size:20px;
+    outline:none;
+    background:rgb(245, 90, 90);
+    border:none;
+    color:white;
+}
+
+#signup-button:hover {
+    opacity: 0.9;
+    transition: 0.5s;
+}

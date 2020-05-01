@@ -1,0 +1,152 @@
+
+.header {
+    width:100%;
+    height:auto;
+    max-width: 100%;
+    float:left;
+}
+
+#page-nav {
+    width:100%;
+    max-width:100%;
+    height:60px;
+    max-height: 60px;
+    float:left;
+
+}
+
+
+#search-container 
+{
+    float:left;
+    list-style: none;
+    width:20%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-container input
+{
+    width:220px;
+    max-width: 220px;
+    height:34px;
+    outline:none;
+    border:0.3px solid rgb(54, 54, 54);
+    font-size:18px;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: 4px;
+    padding-left:6px;
+}
+
+#menu {
+    list-style: none;
+    width:80%;
+    height:100%;
+    float:left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-elem {
+    float: left;
+  }
+
+.menu-elem a {
+    color:black;
+    padding-top:16px;
+    padding-bottom:16px;
+    padding-left:25px;
+    padding-right:25px;
+    font-size:1.25em;
+    font-weight: 500;
+}
+
+.bag-link {
+    margin-left: 150px;
+    font-size:1.22em;
+}
+
+.profile-link {
+    margin-right:40px;
+    font-size:1.22em;
+}
+
+.under-header {
+
+    width:100%;
+    max-width: 100%;
+    float:left;
+    height:120px;
+    max-height: 120px;
+
+    padding-bottom: 23px;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgba(0,0,0,.05);
+}
+
+
+#sector
+{
+    height:100%;
+    max-width:1170px;
+    width:1170px;
+    margin-top:30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    margin:0 auto;
+}
+#logo 
+{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    display:block;
+}
+
+#logo img{
+    display:block;
+    max-width: 100%;
+    border:none;
+}
+
+#sector-address
+{
+ position: relative;
+ padding-left: 28px;
+ box-sizing: border-box;
+}
+
+.name 
+{
+    color:#666;
+    font: 14px/20px Roboto;
+}
+
+.text
+{
+    color:#222;
+    font:14px/20px Roboto;
+}
+
+
+#sector-contacts
+{
+    text-align: center;
+}
+
+#sector-contacts .tel a
+{
+    position: relative;
+    padding-left: 28px;
+    color: #000;
+    font: 700 20px Roboto;
+    text-decoration: none;
+    
+}
