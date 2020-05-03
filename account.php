@@ -3,7 +3,7 @@
 
 
 include "source/server/QueryBuilder.php";
-include "source/server/db_connect.php";
+
 
 
 
@@ -124,9 +124,11 @@ if(!empty($_COOKIE['email']) && !empty($_COOKIE['user_id']))
                 </div>
 
                 <form id="realname-info" method="POST">
-                    <h5>Заполните личные данные, для быстрого заказа.</h5><br><br>
+
 
                     <?php if(!$row['firstname']) { ?>
+                     <h5>Заполните личные данные, для быстрого заказа.</h5><br><br>
+
                     <label for="realname-first">Имя: </label>
                     <input type="text" id="realname-first" name="realname-first" placeholder=""><br><br>
                     <?php } ?>
@@ -159,9 +161,11 @@ if(!empty($_COOKIE['email']) && !empty($_COOKIE['user_id']))
 
         
                     
-                    <h5>Адрес для доставки по Абинску.</h5><br><br>
+
 
                     <?php if(!$row['useraddress']) { ?>
+                        <h5>Адрес для доставки по Абинску.</h5><br><br>
+
                     <label for="user-address">Адрес: </label>
                     <input type="tel" id="user-address" name="user-address" value="<?php echo $row['useraddress'];?>"><br><br>
 

@@ -41,7 +41,7 @@
 
 #rightbar h3 {
     color:white;
-    font-size: 1.7em;
+    font-size: 1.3em;
     padding-bottom: 15px;
 }
 
@@ -51,7 +51,7 @@
     height:40px;
     max-height: 40px;
     max-width: 200px;
-    font-size:18.5px;
+    font-size:15.5px;
     color:black;
     outline:none;
     border:1px solid rgb(170,0,0);
@@ -62,7 +62,7 @@
 #feed-call-form button {
     outline:none;
     width:160px;
-    font-size:22px;
+    font-size:19px;
     height:40px;
     max-height: 40px;
     background-color: rgb(250, 215, 30);
@@ -90,7 +90,7 @@
     height:40px;
     max-height: 40px;
     max-width: 200px;
-    font-size:18.5px;
+    font-size:15.5px;
     color:black;
     outline:none;
     border:1px solid rgb(170,0,0);
@@ -100,7 +100,7 @@
 #bonus-price-form #bonus-calc-button {
     outline:none;
     width:160px;
-    font-size:22px;
+    font-size:19px;
     height:40px;
     max-height: 40px;
     background-color: rgb(250, 215, 30);
@@ -116,7 +116,7 @@
 
 #bonus-price-form span {
     color:white;
-    font-size: 22px;
+    font-size: 19px;
     margin-top:5px;
 }
 
@@ -144,7 +144,12 @@
 
 #about-company .headline h1 {
     margin-top:-10px;
-    color:black;
+    text-transform: uppercase;
+    font-family: Neue Plak,Arial Narrow,Franklin Gothic Book,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 17px;
+    letter-spacing: 2px;
 }
 
 #about-company .about-text {
@@ -159,8 +164,10 @@
 }
 
 #about-company .about-text {
-    font-size:22px;
-    color:black;
+    font-family: Neue Plak,Arial Narrow,Franklin Gothic Book,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+
 }
 
 
@@ -222,67 +229,43 @@
     float: left;
 }
 
+.contacts-element :last-child {
+    width:12.5%;
+}
+
+
 .contacts-element h4 {
     color: #646669;
-    font-size: 30px;
+    font-size: 25px;
     cursor: default;
     font-weight: 100;
 }
 
 .contacts-element span {
-    font-size: 20px;
+    font-size: 18px;
     color: #646669;
 }
 
 #footer {
     width: 100%;
-    height: 200px;
+    height: auto;
     max-width: 100%;
     float:left;
     font-size: 20px;
-    background-color:rgb(170,0,0);
-    color: white;
-    font-size: 20px;
+    border-top:1px solid lightgray;
 }
 
-#foot-1 {
-    width: 100%;
-    height: 20%;
-    float: left;
-    background-color: rgb(177, 58, 58);
-}
-
-#foot-2 {
-    width: 100%;
-    height: 40%;
-}
-#foot-num {
-    width: 50%;
-    float: left;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#foot-links {
-    width: 50%;
-    float: left;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#foot-links a {
-    color: white;
-    margin-right: 2%;
-}
 
 #foot-3 {
     width: 100%;
-    height: 40%;
-    text-align: center;
+    height: 80px;
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#foot-3 a {
+    padding-left:10px;
 }

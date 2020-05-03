@@ -8,7 +8,7 @@
             <li class="menu-elem"><a href="catalog.php">Каталог</a></li>
             <li class="menu-elem"><a href="">Контакты</a></li>
             <li class="menu-elem"><a href="">Помошь</a></li>
-            <li class="menu-elem bag-link"><a href=""><i class="fas fa-shopping-bag"></i></a></li>
+            <li  class="menu-elem bag-link"><a style="font-size: 15px;" href=""><i class="fas fa-shopping-bag"></i></a></li>
 
             <?php  
                 if(empty($_COOKIE['email'])) {

@@ -1,0 +1,161 @@
+.feedback-container {
+margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+#feedback
+{
+    width:100%;
+    height:100%;
+}
+
+
+
+#reviews {
+    width:100%;
+    max-width: 100%;
+    float:left;
+    display: flex;
+    justify-content: center;
+}
+
+#feedback-headline {
+    width:100%;
+    height: 75px;
+    max-height: 100px;
+    float:left;
+}
+
+#feedback-headline>div {
+    display: block;
+    width:80%;
+    padding-left: 12%;
+    padding-bottom: 50px;
+}
+
+#feedback-headline h3
+{
+    font-size: 28px;
+    color: #1A2B48;
+    margin-bottom: 55px;
+    margin-left: 30px;
+}
+
+.review {
+    max-width: 370px;
+    width:370px;
+    margin-right: 30px;
+    max-height: 350px;
+    float:left;
+    background:white;
+    border:1px solid lightgray;
+    border-radius: 3px;
+}
+
+.review-container {
+    display: block;
+    padding:15px;
+}
+
+.review-headline {
+    max-height: 80px;
+    height: 80px;
+    max-width: 100%;
+    width:100%;
+    float:left;
+    box-sizing: border-box;
+    padding:4px;
+}
+
+.review-user-logo {
+    width:30%;
+    max-width: 120px;
+    height:100%;
+    float:left;
+}
+
+
+.review-user-logo li {
+    list-style: none;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.review-user-logo img {
+max-width:65px;
+max-height:65px;
+}
+
+.review-user-name{
+    width:70%;
+    float:left;
+    max-width: 70%;
+    height:100%;
+}
+
+.user-name-head {
+    width:100%;
+    height:50%;
+    float:left;
+    display: flex;
+    align-items: center;
+}
+
+.user-name-head span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 1px;
+}
+
+.user-name-stars {
+
+    width: 100%;
+    height: 30%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.user-name-stars li {
+    color: #FFDC00;
+    font-size: 16px;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.review-content {
+    width:100%;
+    height:auto;
+    float:left;
+    top:0%;
+    left:0%;
+    display: block;
+    padding-bottom: 120px;
+}
+
+
+.review-content p {
+    font-size: 14px;
+    color: #768092;
+    margin-bottom: 0px;
+    margin: 0 0 10px;
+    word-wrap: break-word;
+
+}
+
+.review-text {
+    display: flex;
+    justify-content: center;
+    padding:10px 20px 10px 20px;
+    flex-wrap: wrap;
+}
+
+
+
+

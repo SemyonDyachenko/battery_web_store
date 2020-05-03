@@ -7,7 +7,9 @@
     <div id="wrapper">
         <?php require 'source/static/header.php'; ?>
         <?php require 'source/widgets/main.php'; ?>
+        <?php require 'source/widgets/feedback.php'; ?>
         <?php require 'source/widgets/contacts.php'; ?>
+
         <?php require 'source/static/footer.php';?>
     
     </div>

@@ -1,7 +1,5 @@
 <?php
 
-include "source/server/db_connect.php";
-
 $dbc = mysqli_connect('localhost','root','','akkums');
 
 
@@ -22,31 +20,31 @@ if(isset($_POST["signup-button"]))
     {
         if(strlen($password) > 6 && strlen($password) < 16)
         {
-        if($password == $passwordRepeat)
-        {
-        $query = "SELECT * FROM `users` WHERE email = '$email'";
-        $data= mysqli_query($dbc,$query);
+            if($password == $passwordRepeat)
+            {
+                $query = "SELECT * FROM `users` WHERE email = '$email'";
+                $data= mysqli_query($dbc,$query);
 
-        if (mysqli_num_rows($data) == 0) {
-            // если такого нет, то сохраняем данные
-            $query =  mysqli_query($dbc,"INSERT INTO `users` (email,password) VALUES ('$email',SHA('$password'))") or die(mysqli_error($dbc));
+                if (mysqli_num_rows($data) == 0) {
+                    // если такого нет, то сохраняем данные
+                    $query =  mysqli_query($dbc,"INSERT INTO `users` (email,password) VALUES ('$email',SHA('$password'))") or die(mysqli_error($dbc));
 
-            header('Location: signin.php');
-            mysqli_close($dbc);
-            
-            exit();
+                    header('Location: signin.php');
+                    mysqli_close($dbc);
+
+                    exit();
+                }
+                else {
+                    echo 'Такой логин уже существует!';
+                }
+            }
+            else {
+                echo 'Извените, но пароли не совпадают!';
+            }
         }
         else {
-         echo 'Такой логин уже существует!';
+            echo 'Пароль не соответствует требованиям!';
         }
-    }
-        else {
-            echo 'Извените, но пароли не совпадают!';
-        }
-    }
-    else {
-        echo 'Пароль не соответствует требованиям!';
-    }
     }
     else {
         echo 'Заполните все поля';

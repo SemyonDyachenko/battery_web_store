@@ -9,19 +9,18 @@ class User
 
     public function GetName()
     {
-        return $name;
+        return $this->name;
     } 
 
-    
 
     public function GetEmail()
     {
-        return $email;
+        return $this->email;
     }
 
     public function GetPassword()
     {
-        return $password;
+        return $this->password;
     }
 
 }

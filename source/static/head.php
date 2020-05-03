@@ -25,12 +25,17 @@ $title = "Аккумуляторный Центр № 1 | Купить Акку�
 <link rel="stylesheet" href="styles/account.css">
 <link rel="stylesheet" href="styles/maininfo.css">
 <link rel="stylesheet" href="styles/catalog.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="styles/reviews.css">
+
 
 <!--scripts-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
 <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

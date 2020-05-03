@@ -1,6 +1,6 @@
 <?php
 
-include "source/server/db_connect.php";
+
 
 if(!empty($_COOKIE['email'])) {
     $home_url = 'http://' . $_SERVER["HTTP_HOST"];
