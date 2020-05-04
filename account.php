@@ -171,11 +171,11 @@ if(!empty($_COOKIE['email']) && !empty($_COOKIE['user_id']))
 
                     <?php } ?>
 
-                    <?php if(!$row['firstname'] && !$row['lastname'] && !$row['middlename'] && !$row['borndate'] && !$row['usernumber'] && !$row['useraddress']) { ?>
+
 
                     <button type="submit" id="account-button" name="account-button">Сохранить</button>
 
-                    <?php } ?>
+
                 </form>
 
                 <a href="accountExit.php">Выйти</a>

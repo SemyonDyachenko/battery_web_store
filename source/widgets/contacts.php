@@ -5,7 +5,7 @@
 
     <div id="map-widget">
 
-    <iframe src="https://yandex.ru/map-widget/v1/-/CWsNy6PJ" width="1000" height="600" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CWsNy6PJ" width="1200" height="600" frameborder="1" allowfullscreen="true" style=""></iframe>
     </div>
     
 </div>

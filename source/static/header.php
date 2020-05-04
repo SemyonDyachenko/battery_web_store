@@ -1,7 +1,7 @@
 <div class="header desktop">
     <nav id="page-nav">
         <ul id="search-container">
-            <li><input type="text" name="page-search" id="page-search" placeholder="Поиск по сайту"></li> <a style="margin-left:10px;font-size:18px;color:black;" href="#"><li class="fas fa-search"></li></a>
+            <li><input type="text" name="page-search" id="page-search" placeholder="Поиск по сайту"></li> <a id="page-searcher" href="#"><li class="fas fa-search"></li></a>
         </ul>
         <ul id="menu">
             <li class="menu-elem"><a href="/">Главная</a></li>
@@ -41,7 +41,7 @@
 
             <div id="sector-time">
             <div class="name"><li class="fas fa-clock"></li> График работы:</div>
-            <div class="text">пн-вс 07:00-19:00</div>
+            <div class="text">пн-вс 08:00-19:00</div>
             </div>
 
             <div id="sector-contacts">

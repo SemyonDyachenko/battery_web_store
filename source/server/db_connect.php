@@ -1,15 +1,9 @@
 <?php
 
-$driver = 'mysql';
-$host = 'localhost';
-$db_user = 'root';
-$db_name = 'akkums';
-$db_password = '';
-$charset = 'utf8';
-$options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+
 
 try {
-    $pdo = new PDO("$driver:host=$host;dbname=$db_name;charset=$charset", $db_user, $db_password, $options);
+    $pdo = new PDO("mysql:host=localhost;dbname=akkums", 'root', '');
 }
 catch (PDOException $e)
 {

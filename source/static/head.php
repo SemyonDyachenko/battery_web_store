@@ -27,6 +27,24 @@ $title = "Аккумуляторный Центр № 1 | Купить Акку�
 <link rel="stylesheet" href="styles/catalog.css">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="styles/reviews.css">
+<link rel="stylesheet" href="styles/copyright.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="resource/icons/siteicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="resource/icons/siteicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="resource/icons/siteicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="resource/icons/siteicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="resource/icons/siteicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="resource/icons/siteicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="resource/icons/siteicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="resource/icons/siteicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resource/icons/siteicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="resource/icons/siteicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resource/icons/siteicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="resource/icons/siteicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resource/icons/siteicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
 
 <!--scripts-->
@@ -35,7 +53,7 @@ $title = "Аккумуляторный Центр № 1 | Купить Акку�
 <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+<script src="scripts/page-scrolling.js">console.log("scroolling");</script>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

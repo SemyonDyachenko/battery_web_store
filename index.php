@@ -13,6 +13,7 @@
         <?php require 'source/static/footer.php';?>
     
     </div>
+
 </body>
 
 </html>
