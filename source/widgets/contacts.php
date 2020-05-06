@@ -1,14 +1,5 @@
 <div id="contacts-container">
 
-<div id="yandex-map-container">
-    <div class="headline"><h2>Точка продаж на карте.</h2></div>
-
-    <div id="map-widget">
-
-    <iframe src="https://yandex.ru/map-widget/v1/-/CWsNy6PJ" width="1200" height="600" frameborder="1" allowfullscreen="true" style=""></iframe>
-    </div>
-    
-</div>
 
 
 <div id="contacts">

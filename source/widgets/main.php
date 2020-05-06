@@ -3,11 +3,7 @@
 
 <div id="main">
 
-    <div class="introducing-container container">
-        <div class="introducing-varta">
-            <img src="resource/images/vartaprew.jpg" alt="varta.jpg">
-        </div>
-    </div>
+
 
     <div class="feedcall-container container">
 
