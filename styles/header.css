@@ -5,6 +5,8 @@
     max-width: 100%;
     float:left;
     position: fixed;
+    background-color: black;
+
 }
 
 
@@ -17,7 +19,7 @@
 #search-container>a {
     margin-left:10px;
     font-size:18px;
-    color:black;
+    color:white;
 }
 
 .header.scroll a{
@@ -76,7 +78,7 @@
   }
 
 .menu-elem a {
-    color:black;
+    color:white;
     padding-top:16px;
     padding-bottom:16px;
     padding-left:25px;
@@ -107,9 +109,8 @@
     width:100%;
     max-width: 100%;
     float:left;
-    height:120px;
+    height:90px;
     max-height: 120px;
-
     padding-bottom: 23px;
     background: #fff;
     box-sizing: border-box;
@@ -120,7 +121,7 @@
 #sector
 {
     height:100%;
-    max-width:1170px;
+    max-width:1280px;
     width:1170px;
     margin-top:30px;
     display: flex;

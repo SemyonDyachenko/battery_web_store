@@ -27,7 +27,7 @@
 </div>
 
 
-<div class="under-header desktop">
+<!--<div class="under-header desktop">
 
     <div id="sector">
             <div id="sector-logo">
@@ -54,5 +54,5 @@
         </div>
 
 
-</div>
+</div>-->
 

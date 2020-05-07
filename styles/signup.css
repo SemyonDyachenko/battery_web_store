@@ -102,7 +102,7 @@
     height:auto;
 }
 
-#signform input {
+#signform,.restore-child input {
     width:520px;
     max-width: 520px;
     height:52px;
@@ -129,14 +129,18 @@
 }
 
 
-.signform button:hover {
+.restore-child {
+    padding:100px 100px 100px 100px;
+}
+
+.signform,.restore-button button:hover {
     background-color: #2EE59D;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
     transform: translateY(-7px);
 }
 
-#signup-button {
+#signup-button,#restore-button {
     margin-top: 35px;
     width:180px;
     height: 55px;
@@ -162,6 +166,9 @@
     opacity: 0.4;
 }
 
+#restore-button:disabled {
+    opacity: 0.4;
+}
 
 
 #go-sign {
