@@ -126,9 +126,14 @@
 
 
 .introducing-container {
-    height:800px;
-    max-height: 800px;
+    height:500px;
+    max-height: 500px;
     position: initial;
+
+}
+
+.introducing-container img {
+    width: 100%;
 }
 
 .introducing-varta {

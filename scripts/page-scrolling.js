@@ -3,11 +3,13 @@ $(window).scroll(function(){
         $('.header').addClass('scroll');
         $('.container').css('position','inherit');
         $('#page-searcher').css('color','white');
+        $('.setting').css('position','inherit');
     }
     else {
         $('.header').removeClass('scroll');
         $('.container').css('position','relative');
         $('#page-searcher').css('color','black');
+        $('.setting').css('position','relative');
 
     }
 });

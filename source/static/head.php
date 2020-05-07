@@ -6,6 +6,10 @@ $title = "Аккумуляторный Центр № 1 | Купить Акку�
 
 
 <head>
+
+<!-- Copyright 2020 © All Rights Reserved, Developed by Semyon Dyachenko,Abinsk  -->
+
+
 <!--meta-->
 <meta charset="utf-8">
 <meta name="Keywords" contect="Продажа аккумуляторов абинск , Краснодарский край аккумуляторы , Абинск аккумуляторы, авто сервис абинск, продажа аккумуляторов в Абинске , аккумуляторный цетр № 1 абинск , Абинск,Абинский район , доставка аккумуляторов по Абинскому району,аккумулятор,купить аккумулятор в абинске,купить аккумулятор,акб,купить акб,акб абинск">
@@ -13,6 +17,7 @@ $title = "Аккумуляторный Центр № 1 | Купить Акку�
 <meta name="yandex-verification" content="248a54dc38fa373b">
 <meta name="google-site-verification" content="4jgqFNfKfR-777Gi0Zb71hyOW7kPnS56fJ4kErNu_FM">
 <meta name="wmail-verification" content="fec9e53fe8915fe24a99a9bcc026c8ff">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--css-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

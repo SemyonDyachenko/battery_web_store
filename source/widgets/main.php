@@ -4,6 +4,12 @@
 <div id="main">
 
 
+    <div class="introducing-container container">
+
+        <img src="resource/images/akkums.jpg" alt="battery.jpg">
+
+    </div>
+
 
     <div class="feedcall-container container">
 
@@ -53,24 +59,6 @@
 
 </div>
 
-<script>
-
-    const bonusPrice = document.getElementById("bonus-price-input");
-    const bonusTok = document.getElementById("bonus-tok-input");
-
-    const bonusBtn = document.getElementById("bonus-calc-button");
-
-    bonusBtn.addEventListener("click",function() {
-
-        let newPrice =  Number(bonusPrice.value) - Number(bonusTok.value)*10; 
-
-        document.getElementById("bonus-newprice").innerHTML = "Новая цена: " + newPrice;
-
-
-
-    });
-
-</script>
 
 <script>
 

@@ -1,7 +1,7 @@
 <?php
 
 
-class User
+class UserController
 {
     private $name;
     private $email;
@@ -22,6 +22,8 @@ class User
     {
         return $this->password;
     }
+
+
 
 }
 

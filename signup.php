@@ -29,7 +29,7 @@ if(isset($_POST["signup-button"]))
                     // если такого нет, то сохраняем данные
                     $query =  mysqli_query($dbc,"INSERT INTO `users` (email,password) VALUES ('$email',SHA('$password'))") or die(mysqli_error($dbc));
 
-                    header('Location: signin.php');
+                    header('Location: login.php');
                     mysqli_close($dbc);
 
                     exit();
@@ -78,9 +78,10 @@ if(isset($_POST["signup-button"]))
                     <input  type="password" id="sign-password" name="sign-password" placeholder="Пароль"><br><br>
                     <input type="password" id="sign-password-repeat" name="sign-password-repeat" placeholder="Повторите пароль"><br><br>
 
+
                     <button type="submit" id="signup-button" name="signup-button">Регистрация</button><br>
 
-                    <a style="display:block;margin-top:25px;font-size:18px;" href="signin.php">Уже есть аккаунт ? Войти </a>
+                    <a style="display:block;margin-top:25px;font-size:18px;" href="login.php">Уже есть аккаунт ? Войти </a>
                 </form>
             </div>
         </div>

@@ -9,7 +9,7 @@
 
 <?php require 'source/static/header.php'; ?>
 
-<div class="store-container">
+<div class="store-container container">
 
     <div class="preview-container container">
 
@@ -21,7 +21,7 @@
 
 
 
-<div class="container">
+<div class="select-settings-container container">
 
     <div id="select-settings">
 
@@ -112,6 +112,9 @@
 
 </div>
 
+    <?php require 'source/widgets/mailing.php'; ?>
+
+    <?php require 'source/static/footer.php'; ?>
 
 </div>
 

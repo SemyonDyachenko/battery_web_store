@@ -9,12 +9,25 @@
 .sign-headline
 {
     width:100%;
-    height:300px;
-    max-height: 300px;
+    height:200px;
+    max-height: 200px;
     max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.sign-headline h3 {
+    font-family: Neue Plak,Arial Narrow,Franklin Gothic Book,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 17px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+
 }
 
 .signform-container
@@ -22,44 +35,170 @@
     width:100%;
     height:auto;
     box-sizing: border-box;
+    padding-left: 15%;
+    padding-right: 15%;
+}
 
-    padding-left: 20%;
-    padding-right: 20%;
+
+
+.login-container,.sign-container {
+    width:50%;
+    max-width: 50%;
+    float:left;
+    height:100%;
+    padding:0px;
+}
+
+.login-form-headline {
+    width:100%;
+    height:150px;
+    max-height: 150px;
+    padding-top:20px;
+    float:left;
     display: flex;
-    justify-content: center;
+    align-items: center;
+}
+
+.login-form-headline h1 {
+    font-style: normal;
+    font-size: 36px;
+    line-height: 64px;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: Neue Plak Wide,Arial Narrow,Franklin Gothic Book,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+.sign-row {
+    width:100%;
+    float:left;
+    padding:0px;
+    margin:0px;
+}
+
+.sign-container h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 0px;
+    margin-text: 0px;
+    padding-bottom: 6px;
+    color: #000000;
+}
+
+.sign-container a {
+    color:white;
+    text-decoration: none;
 }
 
 #signform
 {
-    width:384px;
-    max-width: 384px;
+    max-width: 784px;
     height:auto;
-    text-align: center;
 }
 
 #signform input {
-    width:260px;
-    max-width: 260px;
-    height:38px;
-    max-height: 40px;
+    width:520px;
+    max-width: 520px;
+    height:52px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+    padding:4px;
+    background-color: #FFFFFF;
+    border:1px solid #d3d3d3;
+    border-radius: 2px;
     outline:none;
-    border:0.3px solid black;
-    font-size:18px;
+}
+
+
+#signform input.no-validate {
+    border-bottom: 2px solid red;
+}
+
+.signform input:focus {
+    background-color: #dedede;
+    transform: translateY(-2px);
+    transition: all 0.3s ease 0s;
+}
+
+
+.signform button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
 }
 
 #signup-button {
+    margin-top: 35px;
     width:180px;
-    height:38px;
-    max-height: 38px;
-    margin-top:10px;
-    font-size:20px;
-    outline:none;
-    background:rgb(245, 90, 90);
-    border:none;
+    height: 55px;
+    background:black;
     color:white;
+    font-family: Neue Plak,Arial Narrow,Franklin Gothic Book,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border:1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    border: none;
+}
+
+
+#signup-button:disabled {
+    opacity: 0.4;
+}
+
+
+
+#go-sign {
+    margin-top: 62px;
+    width:180px;
+    height: 55px;
+    background:black;
+    color:white;
+    font-family: Neue Plak,Arial Narrow,Franklin Gothic Book,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border:1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    border: none;
+}
+
+#go-sign:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.signup-button:disabled {
+    opacity: 0.4;
 }
 
 #signup-button:hover {
-    opacity: 0.9;
-    transition: 0.5s;
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
 }

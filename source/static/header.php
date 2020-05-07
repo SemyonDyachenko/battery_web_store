@@ -13,7 +13,7 @@
             <?php  
                 if(empty($_COOKIE['email'])) {
             ?>
-            <li class="menu-elem profile-link"><a href="signup.php"><i class="fas fa-user"></i></a></li>
+            <li class="menu-elem profile-link"><a href="login.php">Войти</a></li>
 
             <?php } else { ?>
                 <li class="menu-elem profile-link"><a href="account.php">Личный кабинет</a></li>
