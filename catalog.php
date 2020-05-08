@@ -4,10 +4,21 @@
 
 
 <body>
-    
+
+
+
+
+<div class="product-viewer">
+    <div class="prudct-viewer-child">
+
+    </div>
+</div>
+
 <div id="wrapper">
 
 <?php require 'source/static/header.php'; ?>
+
+
 
 <div class="store-container container">
 
@@ -100,6 +111,52 @@
 <div class="catalog-container container">
 
     <div class="catalog">
+        <?php
+
+        include 'source/server/QueryBuilder.php';
+
+        try {
+            $pdo = new PDO("mysql:host=localhost;dbname=akkums", 'root', '');
+        }
+        catch (PDOException $e)
+        {
+            die('Не удалось подключиться к базе данных');
+        }
+
+        $db = new QueryBuilder($pdo);
+        $akb_row = $db->GetAll('akb');
+
+
+
+        if($db->GetAllCount('akb') > 0)
+        {
+
+           for($i = 0; $i < $db->GetAllCount('akb'); $i++)
+            {
+
+        ?>
+        <div class="product-container">
+            <div class="product-container-child">
+                <div class="product-container-price">
+                    <h4><?php echo $akb_row[$i]['price']; ?> RUB</h4>
+                </div>
+                <div class="product-container-image">
+                    <?php $imgpath = $akb_row[$i]['imgpath'];
+                   echo  '<img src="'.$imgpath.'" alt="product.jpg">'; ?>
+                </div>
+                <div class="product-container-about">
+                    <h3><?php echo $akb_row[$i]['modelname']; ?></h3>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <?php
+            }
+        }
+        ?>
 
 
 
@@ -118,7 +175,7 @@
 
 </div>
 
-
+<script src="scripts/product-view.js"></script>
 
 </body>
 </html>

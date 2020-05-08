@@ -94,7 +94,7 @@ if(!isset($_COOKIE['user_id']))
 
                         <h3><i class="fas fa-angle-down"></i> Корзина товаров.</h3>
 
-                            <button id="go-sign"><a href="#">Регистрация</a></button><br>
+                            <button id="go-sign"><a href="signup.php">Регистрация</a></button><br>
                     </div>
 
                 </div>

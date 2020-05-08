@@ -7,14 +7,14 @@
 }
 
 .feedcall-container {
-
+padding-top: 100px;
 }
 
 .feedcall-container-child {
     width:100%;
     height: 100%;
     float:left;
-    padding-top: 80px;
+    padding-top: 20px;
     padding-bottom: 80px;
     padding-left:20px;
     padding-right:20px;
@@ -126,23 +126,20 @@
 
 
 .introducing-container {
-    margin-top: 45px;
+    margin-top:45px;
     height: 500px;
     max-height: 500px;
     position: initial;
-    padding: 0px;
+
 
 }
 
 .introducing-container img {
     width: 100%;
+    padding:0px;
 }
 
 
-.introducing-varta img {
-    width:100%;
-    height:100%;
-}
 
 #info-slider {
     width:75%;
@@ -164,15 +161,6 @@
     border-radius: 5px;
 }
 
-#rightbar #feed-call-form{
-    width:100%;
-    height:280px;
-    max-height: 384px;
-    margin-bottom: 20px;
-    border:1px solid rgb(170,0,0);
-    background:rgb(170,0,0);
-    border-radius: 5px;
-}
 
 #rightbar h3 {
     color:white;
@@ -180,86 +168,8 @@
     padding-bottom: 15px;
 }
 
-#feed-call-form input {
-
-    width:200px;
-    height:40px;
-    max-height: 40px;
-    max-width: 200px;
-    font-size:15.5px;
-    color:black;
-    outline:none;
-    border:1px solid rgb(170,0,0);
-    border-radius: 3px;
-
-}
-
-#feed-call-form button {
-    outline:none;
-    width:160px;
-    font-size:19px;
-    height:40px;
-    max-height: 40px;
-    background-color: rgb(250, 215, 30);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-width: 0px;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-    border-right-width: 0px;
-}
-
-#bonus-price-form {
-    height:300px;
-    max-height: 300px;
-    background:rgb(170,0,0);
-    border:1px solid rgb(170,0,0);
-    border-radius: 5px;
-}
 
 
-#bonus-price-form input {
-    width:200px;
-    height:40px;
-    max-height: 40px;
-    max-width: 200px;
-    font-size:15.5px;
-    color:black;
-    outline:none;
-    border:1px solid rgb(170,0,0);
-    border-radius: 3px;
-}
-
-#bonus-price-form #bonus-calc-button {
-    outline:none;
-    width:160px;
-    font-size:19px;
-    height:40px;
-    max-height: 40px;
-    background-color: rgb(250, 215, 30);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-width: 0px;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-    border-right-width: 0px;
-}
-
-#bonus-price-form span {
-    color:white;
-    font-size: 19px;
-    margin-top:5px;
-}
-
-#info-slider iframe {
-    width:100%;
-    height:600px;
-    max-height: 600px;
-}
 
 #about-company {
     width:100%;

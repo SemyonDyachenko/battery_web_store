@@ -1,4 +1,3 @@
 AddDefaultCharset UTF-8
 ErrorDocument 404 http://127.0.0.1/denwer/404.php
 
-

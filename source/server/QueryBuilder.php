@@ -19,8 +19,20 @@ class QueryBuilder {
 
         $statement->execute();
 
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $statement->fetchAll();
     }
+
+    public function GetAllCount($tablename)
+    {
+        $query = "SELECT * FROM {$tablename}";
+
+        $statement = $this->pdo->prepare($query);
+
+        $statement->execute();
+
+        return $statement->rowCount();
+    }
+
 
 
     public function GetAllData($tablename,$key,$value)
