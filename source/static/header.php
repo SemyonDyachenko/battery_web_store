@@ -4,19 +4,20 @@
             <li><input type="text" name="page-search" id="page-search" placeholder="Поиск по сайту"></li> <a id="page-searcher" href="#"><li class="fas fa-search"></li></a>
         </ul>
         <ul id="menu">
-            <li class="menu-elem"><a href="/">Главная</a></li>
-            <li class="menu-elem"><a href="catalog.php">Каталог</a></li>
-            <li class="menu-elem"><a href="">Контакты</a></li>
-            <li class="menu-elem"><a href="">Помошь</a></li>
+            <li class="menu-elem nav-button"><a href=""><i class="fas fa-bars"></i></a></li>
+            <li  class="menu-elem nav-button"><a href="/">Главная</a></li>
+            <li class="menu-elem nav-button"><a href="catalog">Каталог</a></li>
+            <li class="menu-elem nav-button"><a href="">Контакты</a></li>
+            <li class="menu-elem nav-button"><a href="">Помошь</a></li>
             <li  class="menu-elem bag-link"><a style="font-size: 15px;" href=""><i class="fas fa-shopping-bag"></i></a></li>
 
             <?php  
                 if(empty($_COOKIE['email'])) {
             ?>
-            <li class="menu-elem profile-link"><a href="login.php">Войти</a></li>
+            <li class="menu-elem profile-link"><a href="login">Войти</a></li>
 
             <?php } else { ?>
-                <li class="menu-elem profile-link"><a href="account.php">Личный кабинет</a></li>
+                <li class="menu-elem profile-link"><a href="account">Личный кабинет</a></li>
 
             <?php  } ?>
 

@@ -2,17 +2,7 @@
 <html lang="en">
 <?php require 'source/static/head.php'; ?>
 
-
 <body>
-
-
-
-
-<div class="product-viewer">
-    <div class="prudct-viewer-child">
-
-    </div>
-</div>
 
 <div id="wrapper">
 
@@ -137,6 +127,7 @@
         ?>
         <div class="product-container">
             <div class="product-container-child">
+                <a href="<?php echo "product?id=".$akb_row[$i]['id'] ?>">
                 <div class="product-container-price">
                     <h4><?php echo $akb_row[$i]['price']; ?> RUB</h4>
                 </div>
@@ -145,9 +136,10 @@
                    echo  '<img src="'.$imgpath.'" alt="product.jpg">'; ?>
                 </div>
                 <div class="product-container-about">
-                    <h3><?php echo $akb_row[$i]['modelname']; ?></h3>
+                   <h3 class="modelname-headline"><?php echo $akb_row[$i]['modelname']; ?></h3>
 
                 </div>
+                </a>
             </div>
         </div>
 
@@ -174,6 +166,13 @@
     <?php require 'source/static/footer.php'; ?>
 
 </div>
+
+<script>
+
+
+
+
+</script>
 
 <script src="scripts/product-view.js"></script>
 

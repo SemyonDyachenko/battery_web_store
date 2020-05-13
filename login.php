@@ -78,7 +78,7 @@ if(!isset($_COOKIE['user_id']))
 
                     <button type="submit" id="signup-button" name="signin-button" disabled>Войти</button><br>
 
-                    <a style="display:block;margin-top:25px;font-size:18px;" href="signup.php">Еще не зарегистрированы?</a>
+                    <a style="display:block;margin-top:25px;font-size:18px;" href="signup">Еще не зарегистрированы?</a>
                 </form>
                  </div>
                 <div class="sign-container">
@@ -94,7 +94,7 @@ if(!isset($_COOKIE['user_id']))
 
                         <h3><i class="fas fa-angle-down"></i> Корзина товаров.</h3>
 
-                            <button id="go-sign"><a href="signup.php">Регистрация</a></button><br>
+                            <button id="go-sign"><a href="signup">Регистрация</a></button><br>
                     </div>
 
                 </div>

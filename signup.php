@@ -94,7 +94,7 @@ if(isset($_POST["signup-button"]))
 
                     <button type="submit" id="signup-button" name="signup-button" disabled>Регистрация</button><br>
 
-                    <a style="display:block;margin-top:25px;font-size:18px;" href="login.php">Уже есть аккаунт ? Войти </a>
+                    <a style="display:block;margin-top:25px;font-size:18px;" href="login">Уже есть аккаунт ? Войти </a>
                 </form>
                 </div>
 

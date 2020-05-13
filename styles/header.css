@@ -179,3 +179,53 @@
     text-decoration: none;
     
 }
+
+@media screen and (max-width:1252px )
+{
+    #search-container {
+
+        width:30%;
+    }
+
+    #menu {
+        width:70%;
+    }
+
+}
+
+
+.nav-button:first-child {
+    display: none;
+}
+
+
+@media screen and (max-width: 1154px) {
+    #search-container {
+        display: none;
+    }
+
+    #menu {
+        width:100%;
+    }
+}
+
+
+@media screen and (max-width: 827px) {
+
+
+    .nav-button:not(:first-child){
+        display: none;
+    }
+    .nav-button:first-child {
+
+        display: block;
+        width: 50%;
+    }
+
+    .nav-button:first-child>a {
+        font-size: 22px;
+    }
+}
+
+
+

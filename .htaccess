@@ -1,3 +1,17 @@
 AddDefaultCharset UTF-8
-ErrorDocument 404 http://127.0.0.1/denwer/404.php
+#ErrorDocument 404 http://127.0.0.1/denwer/404.php
+
+RewriteEngine on
+
+RewriteBase /
+
+
+RewriteRule ^catalog$ denwer/catalog.php
+RewriteRule ^login$ denwer/login.php
+RewriteRule ^signup$ denwer/signup.php
+RewriteRule ^account$ denwer/account.php
+RewriteRule ^product$ denwer/productView.php
+
+RewriteRule ^([a-z]+)/([0-9]+)/$ /?product=$1&id=$2&%{QUERY_STRING} [NS,L]
+
 

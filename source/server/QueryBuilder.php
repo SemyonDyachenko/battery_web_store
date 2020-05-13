@@ -35,13 +35,13 @@ class QueryBuilder {
 
 
 
-    public function GetAllData($tablename,$key,$value)
+    public function GetAllData($tablename,$valuename,$value)
     {
-        $query = "SELECT * FROM {$tablename} WHERE {$key} = ?";
+        $query = "SELECT * FROM {$tablename} WHERE {$valuename} = :value";
 
         $statement = $this->pdo->prepare($query);
 
-        $statement->execute($value);
+        $statement->execute(array('value'=>$value));
 
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
