@@ -78,7 +78,7 @@ else {
 
                 <div class="cart-adding">
                 <?php if($availablevalue == 1) { ?>
-                    <button class="incart-add-button" href="#">Добавить в корзину</button>
+                    <button class="incart-add-button" href="#" productid="'.$id.'">Добавить в корзину</button>
                     <?php } else { ?>
                     <button class="incart-add-button" href="#" disabled>Добавить в корзину</button>
                     <?php } ?>

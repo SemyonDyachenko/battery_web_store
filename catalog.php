@@ -123,6 +123,8 @@
 
            for($i = 0; $i < $db->GetAllCount('akb'); $i++)
             {
+                if($akb_row[$i]['available'] == 1)
+                {
 
         ?>
         <div class="product-container">
@@ -146,6 +148,7 @@
 
 
         <?php
+                }
             }
         }
         ?>

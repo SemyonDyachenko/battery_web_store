@@ -55,6 +55,9 @@ $title = "Аккумуляторный Центр № 1 | Купить Акку�
     <meta name="theme-color" content="#ffffff">
 
 
+
+
+
 <!--scripts-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
@@ -76,5 +79,6 @@ $title = "Аккумуляторный Центр № 1 | Купить Акку�
    });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/54079720" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
 
 </head>
