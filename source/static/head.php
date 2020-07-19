@@ -35,6 +35,9 @@ $title = "Аккумуляторный Центр № 1 | Купить Акку�
 <link rel="stylesheet" href="styles/copyright.css">
 <link rel="stylesheet" href="styles/mailing.css">
 <link rel="stylesheet" href="styles/product.css">
+<link rel="stylesheet" href="styles/cart.css">
+<link rel="stylesheet" href="styles/order.css">
+<link rel="stylesheet" href="styles/contacts.css">
 
     <link rel="apple-touch-icon" sizes="57x57" href="resource/icons/siteicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="resource/icons/siteicons/apple-icon-60x60.png">

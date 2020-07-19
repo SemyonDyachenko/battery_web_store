@@ -7,7 +7,6 @@
     position: fixed;
     background-color: black;
     z-index: 101;
-
 }
 
 
@@ -91,7 +90,6 @@
     line-height: 17px;
     letter-spacing: 1px;
 }
-
 
 
 
@@ -228,4 +226,21 @@
 }
 
 
+.cart-count-number {
+    float:left;
+    width:20px;
+    height: 20px;
+    background-color: rgb(6, 45, 117);
+    border:1px solid rgb(6,45,117);
+    border-radius: 100px;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:12px;
+    transform:translateX(55px);
+}
 
+.cart-count-number a {
+    text-decoration: none;
+}

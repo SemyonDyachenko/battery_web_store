@@ -105,7 +105,7 @@ if(isset($_POST["signup-button"]))
                     <div class="sign-row">
                         <h3><i class="fas fa-angle-down"></i> Быстрое оформление заказа.</h3>
 
-                        <h3><i class="fas fa-angle-down"></i> Просмотр истории заказов.
+                        <h3><i class="fas fa-angle-down"></i> Просмотр истории заказов.</h3>
 
                             <h3><i class="fas fa-angle-down"></i> Добавление в избранное.</h3>
 

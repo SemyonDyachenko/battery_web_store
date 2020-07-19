@@ -74,7 +74,7 @@
                     <li><input type="checkbox"><a href="#"> Turbo</a></li>
                     <li><input type="checkbox"><a href="#"> Mutlu</a></li>
                     <li><input type="checkbox"><a href="#"> Varta</a></li>
-                </ul>
+            </ul>
         </div>
 
         <div class="setting">
@@ -160,7 +160,6 @@
 
 
 </div>
-
 
 </div>
 

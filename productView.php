@@ -77,10 +77,24 @@ else {
                 </div>
 
                 <div class="cart-adding">
-                <?php if($availablevalue == 1) { ?>
-                    <button class="incart-add-button" href="#" productid="'.$id.'">Добавить в корзину</button>
+                <?php if($availablevalue == 1) { 
+                         $dbc = mysqli_connect('localhost','root','','akkums');
+
+                         $query = mysqli_query($dbc,"SELECT * FROM `cart` WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}' AND cart_product_id = '$id'");
+
+                         $num_rows = mysqli_num_rows($query);
+
+                         if($num_rows == 0)
+                         {
+
+                     ?>
+                    <button class="incart-add-button"  productid="<?php echo $id; ?>">Добавить в корзину</button>
                     <?php } else { ?>
-                    <button class="incart-add-button" href="#" disabled>Добавить в корзину</button>
+
+                        <button class="incart-add-button" disabled>Добавлен в корзину</button>
+                    
+                       <?php  } } else { ?>
+                    <button class="incart-add-button"  disabled>Нет в наличие</button>
                     <?php } ?>
 
                 </div>
@@ -95,8 +109,13 @@ else {
     <?php require 'source/widgets/mailing.php'; ?>
 
 
+
+
     <?php require 'source/static/footer.php'; ?>
 
 </div>
+
+<script src="scripts/cartScript.js"></script>
+
 </body>
 </html>

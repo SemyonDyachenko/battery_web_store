@@ -13,7 +13,7 @@
         </div>
 
         <div class="contacts-element">
-            <h4><li class="fas fa-map-marker-alt"></li> Адрес:</h4>
+            <h4><li class="fas fa-map-marker-alt"></li> Точка продаж:</h4>
             <span>Ул. Советов 120</span><br>
             <span>Абинск</span><br>
             <span>Краснодарсий край</span><br>
@@ -32,9 +32,7 @@
             <span>вс: 08:00–19:00</span><br>
         </div>
 
-        <div id="space-div" class="contacts-element">
-    
-         </div>
+     
 
 </div>
 

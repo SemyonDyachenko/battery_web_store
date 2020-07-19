@@ -1,15 +1,37 @@
 <div class="header desktop">
     <nav id="page-nav">
         <ul id="search-container">
-            <li><input type="text" name="page-search" id="page-search" placeholder="Поиск по сайту"></li> <a id="page-searcher" href="#"><li class="fas fa-search"></li></a>
+            <li><input type="text" name="page-search" id="page-search" placeholder="Поиск по сайту"></li> <a id="page-searcher" href="search?source="><li class="fas fa-search"></li></a>
         </ul>
         <ul id="menu">
             <li class="menu-elem nav-button"><a href=""><i class="fas fa-bars"></i></a></li>
             <li  class="menu-elem nav-button"><a href="/">Главная</a></li>
-            <li class="menu-elem nav-button"><a href="catalog">Каталог</a></li>
-            <li class="menu-elem nav-button"><a href="">Контакты</a></li>
+           <!-- <li class="menu-elem nav-button"><a href="catalog">Каталог</a></li>-->
+            <li class="menu-elem nav-button"><a href="contacts">Контакты</a></li>
             <li class="menu-elem nav-button"><a href="">Помошь</a></li>
-            <li  class="menu-elem bag-link"><a style="font-size: 15px;" href=""><i class="fas fa-shopping-bag"></i></a></li>
+            <li  class="menu-elem bag-link"><a style="font-size: 15px;" href="cart"><i class="fas fa-shopping-bag"></i></a>
+            <?php 
+             $dbc = mysqli_connect('localhost','root','','akkums');
+
+             $query = mysqli_query($dbc,"SELECT * FROM `cart` WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'");
+
+             $count_of_cart = mysqli_num_rows($query);
+
+             if($count_of_cart != 0)
+             {
+            ?>
+            
+            <div class="cart-count-number">
+              <a href="cart">  
+                  <?php 
+                 echo $count_of_cart;
+                    ?>
+                </a>
+                
+             </div>
+              <? } ?>
+
+            </li>
 
             <?php  
                 if(empty($_COOKIE['email'])) {
