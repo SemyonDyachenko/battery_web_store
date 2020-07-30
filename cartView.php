@@ -82,6 +82,7 @@ require 'source/static/head.php'; ?>
                                         <h4>Емкость: <?php echo $capacity; ?> Ач</h4>
                                         <h4>Пусковой ток: <?php echo $amperage; ?> Ач</h4>
                                         <h4>Цена: <?php echo $price; ?> RUB </h4>
+                                        <h4><a href="<?php echo "product?id=".$row[0]['id']; ?>">Подробнее</a></h4>
                                     </div>
 
                                 </div>
@@ -151,7 +152,7 @@ require 'source/static/head.php'; ?>
                     <button id="cart-order-button"><a style="color:white;text-decoration:none;" href="catalog">Выбрать аккумулятор</a></button>
 
                 <?php } else { ?>
-                    <button id="cart-order-button"><a href="<?php echo "order?order_id=".$row[0]['cart_id'] ?>" style="color:white;text-decoration:none;">Оформить заказ</a></button>
+                    <button id="cart-order-button"><a href="order" style="color:white;text-decoration:none;">Оформить заказ</a></button>
 
                 <?php  } ?>
             </div>

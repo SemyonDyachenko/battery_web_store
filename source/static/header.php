@@ -1,7 +1,7 @@
 <div class="header desktop">
     <nav id="page-nav">
         <ul id="search-container">
-            <li><input type="text" name="page-search" id="page-search" placeholder="Поиск по сайту"></li> <a id="page-searcher" href="search?source="><li class="fas fa-search"></li></a>
+            <li><form method="GET" action="search"><input type="text" name="page-search" id="page-search" placeholder="Поиск по сайту"><button style="background:none;border:none;color:white;padding-left:10px;" type="submit" id="page-searcher"><li class="fas fa-search"></li></form></li>
         </ul>
         <ul id="menu">
             <li class="menu-elem nav-button"><a href=""><i class="fas fa-bars"></i></a></li>

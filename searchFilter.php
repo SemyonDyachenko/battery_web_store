@@ -75,68 +75,86 @@ $akb_count = $statement->rowCount();
 
 <div class="select-settings-container container">
 
-    <div id="select-settings">
+<div id="select-settings">
 
-        <div class="setting">
-            <span>Категория</span>
-            <ul class="subsettings">
-            <li><button type="button" data-category="0" class="btn btn-default active js-category">Все категории</button></li>
-            <li><button type="button" data-category="1" class="btn btn-default js-category">Легковые</button></li>
-            <li><button type="button" data-category="2" class="btn btn-default js-category">Грузовые</button></li>
-            <li><button type="button" data-category="3" class="btn btn-default js-category">ИБП</button></li>
-                </ul>
-        </div>
-
-        <div class="setting">
-            <span>Модель</span>
-            <ul class="subsettings">
-
-                <?php 
-                   $models_row = $db->GetAll('models');
-
-                   if($db->GetAllCount('models') > 0)
-                   {
-           
-                      for($i = 0; $i < $db->GetAllCount('models'); $i++)
-                       {
-                       
-                ?>
-                    <li><input name="models[]" id="<?php echo "checkmodel".$models_row[$i]['id']; ?>" value="<?php echo $models_row[$i]['id'];?>" type="checkbox"><a href="<?php echo "?model=".$models_row[$i]['name'] ?>"><?php echo $models_row[$i]['name']; ?></a></li>
-
-
-                <?php
-                       }
-
-                    }
-
-                ?>
-                    <!--<li><input name="models[]" type="checkbox"><a href="?model=ridicon"> Ridicon</a></li>
-                    <li><input name="models[]" type="checkbox"><a href="?model=turbo"> Turbo</a></li>
-                    <li><input name="models[]" type="checkbox"><a href="#"> Mutlu</a></li>
-                    <li><input name="models[]" type="checkbox"><a href="#"> Varta</a></li>-->
-                </ul>
-        </div>
-
-        <div class="setting">
-
-        <span>Цена</span>
-            <ul class="subsettings">
-        <li><input type="number" placeholder="Минимальная цена"></li>
-        <li><input type="number" placeholder="Максимальная цена"></li>
+    <form id="filter-form" method="GET" action="filters">
+    <div class="setting">
+        <span>Категория<li class="arrow-down fas fa-caret-down"></li></span>
+        <ul class="subsettings">
+        <li><button type="button" data-category="0" class="btn btn-default active js-category">Все категории</button></li>
+        <li><button type="button" data-category="1" class="btn btn-default js-category">Легковые</button></li>
+        <li><button type="button" data-category="2" class="btn btn-default js-category">Грузовые</button></li>
+        <li><button type="button" data-category="3" class="btn btn-default js-category">ИБП</button></li>
             </ul>
-         </div>
+    </div>
 
-         <div class="setting settings-saver">
+    <div class="setting">
+        <span>Модель<li class="arrow-down fas fa-caret-down"></li></span>
+        <ul class="subsettings scroll-sub">
 
-        <span><a href="#" id="settings-saver-btn">Показать</a></span>
+            <?php 
+               $models_row = $db->GetAll('models');
 
-        </div>
+
+               if($db->GetAllCount('models') > 0)
+               {
+       
+                  for($i = 0; $i < $db->GetAllCount('models'); $i++)
+                   {
+                    $checked_model="";
+            
+                        if($_GET['models'])
+                        {
+                                if (in_array($models_row['id'],$_GET['models']))
+                                {
+
+                                        
+                                        $checked_model = "checked";
+                                }
+                        }
+                 
+            ?>
+                <li><input <?php echo $checked_model; ?> name="models[]" id="<?php echo "checkmodel".$models_row[$i]['id']; ?>" value="<?php echo $models_row[$i]['id'];?>" type="checkbox"><a><?php echo $models_row[$i]['name']; ?></a></li>
 
 
-    </div>  
+            <?php
+                    
+                 }
+            }
+
+         
+
+            ?>
+                <!--<li><input name="models[]" type="checkbox"><a href="?model=ridicon"> Ridicon</a></li>
+                <li><input name="models[]" type="checkbox"><a href="?model=turbo"> Turbo</a></li>
+                <li><input name="models[]" type="checkbox"><a href="#"> Mutlu</a></li>
+                <li><input name="models[]" type="checkbox"><a href="#"> Varta</a></li>-->
+            </ul>
+    </div>
+
+    <div class="setting">
+
+    <span>Цена<li class="arrow-down fas fa-caret-down"></li></span>
+        <ul class="subsettings">
+    <li><input type="number" placeholder="Минимальная цена"></li>
+    <li><input type="number" placeholder="Максимальная цена"></li>
+        </ul>
+     </div>
+
+     <div class="setting settings-saver">
+
+    <span><button id="settings-saver-button" type="submit">Показать</button></span>
+
+    </div>
+
+    </form>
+
+
+</div>  
 
 
 </div>
+
 
 <div class="catalog-container container">
 

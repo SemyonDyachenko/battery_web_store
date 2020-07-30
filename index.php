@@ -42,10 +42,11 @@
 
     <div id="select-settings">
 
-        <form style="list-style:none;" method="GET" action="searchFilter.php">
+        <form id="filter-form" method="GET" action="filters">
+            
         <div class="setting">
-            <span>Категория</span>
-            <ul class="subsettings">
+            <span>Категория<li class="arrow-down fas fa-caret-down"></li></span>
+            <ul class="subsettings categories-sub">
             <li><button type="button" data-category="0" class="btn btn-default active js-category">Все категории</button></li>
             <li><button type="button" data-category="1" class="btn btn-default js-category">Легковые</button></li>
             <li><button type="button" data-category="2" class="btn btn-default js-category">Грузовые</button></li>
@@ -54,8 +55,8 @@
         </div>
 
         <div class="setting">
-            <span>Модель</span>
-            <ul class="subsettings">
+            <span>Модель<li class="arrow-down fas fa-caret-down"></li></span>
+            <ul class="subsettings scroll-sub">
 
                 <?php 
                    $models_row = $db->GetAll('models');
@@ -67,7 +68,7 @@
                        {
                        
                 ?>
-                    <li><input name="models[]" id="<?php echo "checkmodel".$models_row[$i]['id']; ?>" value="<?php echo $models_row[$i]['id'];?>" type="checkbox"><a href="<?php echo "?model=".$models_row[$i]['name'] ?>"><?php echo $models_row[$i]['name']; ?></a></li>
+                    <li><input name="models[]" id="<?php echo "checkmodel".$models_row[$i]['id']; ?>" value="<?php echo $models_row[$i]['id'];?>" type="checkbox"><a ><?php echo $models_row[$i]['name']; ?></a></li>
 
 
                 <?php
@@ -85,7 +86,7 @@
 
         <div class="setting">
 
-        <span>Цена</span>
+        <span>Цена<li class="arrow-down fas fa-caret-down"></li></span>
             <ul class="subsettings">
         <li><input type="number" placeholder="Минимальная цена"></li>
         <li><input type="number" placeholder="Максимальная цена"></li>
@@ -94,7 +95,7 @@
 
          <div class="setting settings-saver">
 
-        <span><button type="submit"><a href="#" id="settings-saver-btn">Показать</a></button></span>
+        <span><button id="settings-saver-button" type="submit">Показать</button></span>
 
         </div>
 
@@ -165,13 +166,6 @@
     <?php require 'source/static/footer.php'; ?>
 
 </div>
-
-<script>
-
-
-
-
-</script>
 
 <script src="scripts/product-view.js"></script>
 
