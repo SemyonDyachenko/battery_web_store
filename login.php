@@ -11,7 +11,7 @@ if(!empty($_COOKIE['email'])) {
 $dbc = mysqli_connect('localhost','root','','akkums');
 
 
-if(!isset($_COOKIE['user_id']))
+if(empty($_COOKIE['user_id']))
 {
     if(isset($_POST["signin-button"]))
     {

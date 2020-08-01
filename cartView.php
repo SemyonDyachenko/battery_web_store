@@ -1,7 +1,4 @@
-<?php
 
-
-?>
 
 <!doctype html>
 <html lang="en">
@@ -16,27 +13,22 @@ require 'source/static/head.php'; ?>
     <div class="cart-container container">
     <?php
 
-        include "source/server/db_connect.php";
-        include "source/server/QueryBuilder.php";
-
-        $db = new QueryBuilder($pdo);
-
-        $user_ip = $_SERVER['REMOTE_ADDR'];
-
-        $row = $db->GetAllData('cart', "cart_ip", $user_ip);
+    $dbc = mysqli_connect('localhost','root','','akkums');
 
 
-        $product_ids = array();
+    $user_ip = $_SERVER['REMOTE_ADDR'];     
 
-        for ($i = 0; $i < count($row); $i++) {
-            $product_ids[$i] = $row[$i]['cart_product_id'];
-        }
+    $query = mysqli_query($dbc,"SELECT * FROM cart,akb WHERE cart.cart_ip = '{$_SERVER['REMOTE_ADDR']}' AND akb.id = cart.cart_product_id");
+
+    $cart_count = mysqli_num_rows($query);
+
+    $row = mysqli_fetch_array($query);
 
     ?>
 
         <div class="cart-child">
             <div class="cart-headline">
-                <?php if(count($product_ids) == 0) { ?>
+                <?php if($cart_count == 0) { ?>
                     <h1>Ваша корзина пуста</h1>
             <?php } else { ?>
                     <h1>Корзина товаров</h1>
@@ -50,17 +42,17 @@ require 'source/static/head.php'; ?>
 
 
 
-                    for ($i = 0; $i < count($product_ids);$i++)
-                    {
-                        $row = $db->GetAllData('akb','id',$product_ids[$i]);
+                   do
+                   {
+                       
 
-                        if($row[0]['available'] == 1) {
+                        if($row['available'] == 1) {
 
-                        $imgpath = $row[0]["imgpath"];
-                        $headline = $row[0]["modelname"];
-                        $capacity = $row[0]['capacity'];
-                        $amperage = $row[0]['amperage'];
-                        $price = $row[0]['price'];
+                        $imgpath = $row["imgpath"];
+                        $headline = $row["modelname"];
+                        $capacity = $row['capacity'];
+                        $amperage = $row['amperage'];
+                        $price = $row['price'];
 
 
 
@@ -87,7 +79,7 @@ require 'source/static/head.php'; ?>
 
                                 </div>
                                 <div class="cart-element-close">
-                                    <li onclick='window.location.reload()' class="fas fa-times delete-from-cart" productid="<?php echo $row[0]['id']; ?>"></li>
+                                    <li onclick='window.location.reload()' class="fas fa-times delete-from-cart" productid="<?php echo $row['id']; ?>"></li>
                                 </div>
                             </div>
 
@@ -96,7 +88,7 @@ require 'source/static/head.php'; ?>
 
                     <?php
                         }
-                    }
+                    } while($row = mysqli_fetch_array($query));
                     ?>
 
 
@@ -133,28 +125,30 @@ require 'source/static/head.php'; ?>
 
                 <?php
 
-                $all_price = 0;
+                $all_price = 0; 
 
+            $query = mysqli_query($dbc,"SELECT * FROM cart,akb WHERE cart.cart_ip = '{$_SERVER['REMOTE_ADDR']}' AND akb.id = cart.cart_product_id");
 
+            $cart_count = mysqli_num_rows($query);
 
-                for ($i = 0; $i < count($product_ids);$i++) {
-                    $row = $db->GetAllData('akb','id',$product_ids[$i]);
+            $row = mysqli_fetch_array($query);
 
-                    $all_price = $all_price + $row[0]['price'];
+                do {
+                    $all_price = $all_price + $row['price'];
 
-                }
+                } while($row=mysqli_fetch_array($query));
 
                 ?>
 
                 <h2>В корзине товаров на сумму: <?php echo $all_price; ?> RUB</h2>
 
-                <?php if(count($product_ids) == 0) { ?>
+                <?php if(count($cart_count) == 0) { ?>
                     <button id="cart-order-button"><a style="color:white;text-decoration:none;" href="catalog">Выбрать аккумулятор</a></button>
 
                 <?php } else { ?>
                     <button id="cart-order-button"><a href="order" style="color:white;text-decoration:none;">Оформить заказ</a></button>
 
-                <?php  } ?>
+                <?php  }  mysqli_close($dbc); ?>
             </div>
 
     </div>

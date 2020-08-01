@@ -1,25 +1,15 @@
 <?php
-include 'source/server/QueryBuilder.php';
 
-try {
-    $pdo = new PDO("mysql:host=localhost;dbname=akkums", 'root', '');
-}
-catch (PDOException $e)
-{
-    die('Не удалось подключиться к базе данных');
-}
+$dbc = mysqli_connect('localhost','root','','akkums');
 
-$db = new QueryBuilder($pdo);
-
-
-$query = "SELECT * FROM `cart` WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'";
-$statement = $pdo->prepare($query);
-$statement->execute();
+$query = mysqli_query($dbc,"SELECT * FROM cart,akb WHERE cart.cart_ip = '{$_SERVER['REMOTE_ADDR']}' AND akb.id = cart.cart_product_id");
  
-$cart_count = $statement->rowCount();
+$cart_count = mysqli_num_rows($query);
+
+$cart_row = mysqli_fetch_array($query);
 
 if($cart_count == 0) {
-    header('Location: http://'.$_SERVER['HTTP_HOST']);
+    header('Location: http://'.$_SERVER['HTTP_HOST'].'/denwer/404');
     
 } else {
 
@@ -34,14 +24,8 @@ if(isset($_POST['order-button']))
     $address = trim($_POST['useraddress']);
 
 
-    $query = "SELECT * FROM `cart` WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'";
-    $statement = $pdo->prepare($query);
-    $statement->execute();
-    $cart_row = $statement->fetchAll();
-    
-    $cart_count = $statement->rowCount();
-    
-    $order_id =  substr((base_convert(sha1(uniqid(mt_rand(), true)), 16, 36)),0,8);
+
+    $order_id = substr((base_convert(sha1(uniqid(mt_rand(), true)), 16, 36)),0,8);
 
     $to_email = "semyondyachenko@gmail.com";
     $subject = "Заявка на оформление заказа | абинск-автосервис.рф";
@@ -49,14 +33,16 @@ if(isset($_POST['order-button']))
     $products = "";
     $order_info = "";
 
-    for($i = 0;$i < $cart_count;$i++) {
-    $products .= "<a>абинск-автосервис.рф/product?id=".$cart_row[$i]['cart_product_id']."</a><br>";
-    $order_info .=$cart_row[$i]['cart_product_id'].",";
-    }
+    do {
+
+    
+    $products .= "<a>абинск-автосервис.рф/product?id=".$cart_row['cart_product_id']."</a><br>";
+    $order_info .=$cart_row['cart_product_id'].",";
+    } while($cart_row = mysqli_fetch_array($query));
 
     $message = 
     "
-    <!DOCTYPE HTML>
+    <!DOCTYPE HTML>s
     <html>
     <head>
         <meta charset='utf8'>
@@ -89,36 +75,27 @@ if(isset($_POST['order-button']))
     {
         if(!empty($_COOKIE['user_id']))
         {
-            $db->Create('orders',array(
-                "order_id" => $order_id,
-                "user_id"=> (int)$_COOKIE['user_id'],
-                "order_info" => $order_info
-            ));
+            $query = mysqli_query($dbc,"INSERT INTO `orders` (order_id,user_id,order_info) VALUES ('".$order_id."','".$_COOKIE['user_id']."','".$order_info."')");
         }
         else 
         {
-            $db->Create('orders',array(
-                "order_id" => $order_id,
-                "user_id"=> 999999,
-                "order_info" => $order_info
-            ));
+            $query = mysqli_query($dbc,"INSERT INTO `orders` (order_id,user_id,order_info) VALUES ('".$order_id."','999999','".$order_info."')");
         }
 
-        $query = "DELETE FROM `cart` WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'";
-        $statement = $pdo->prepare($query);
-        $statement->execute();
+        $delete_query = mysqli_query($dbc,"DELETE FROM `cart` WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'");
+       
 
+        $update_query = mysqli_query($dbc,"SELECT * FROM cart WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'");
+        
+        $row = mysqli_fetch_array($update_query);
 
-        for($i = 0;$i < $cart_count;$i++) {
+        do {
 
-            $product_id = $cart_row[$i]['cart_product_id'];
+            $product_id = $row['cart_product_id'];
 
-            $query = "UPDATE `akb` SET available='0' WHERE id='$product_id'";
-            $statement = $pdo->prepare($query);
-            $statement->execute();
-            
+            $query = mysqli_query($dbc,"UPDATE `akb` SET available='0' WHERE id='$product_id'");
 
-        }
+        } while($row = mysqli_fetch_array($update_query));
 
 
         mail($to_email,$subject,$message);
@@ -134,7 +111,7 @@ if(isset($_POST['order-button']))
     
 }
 
-
+mysqli_close($dbc);
 
 ?>
 
@@ -240,15 +217,21 @@ echo $orderNumber;
                 <div id="order-info">
                 <?php
 
+                
+            $dbc = mysqli_connect('localhost','root','','akkums');
+
 
             $user_ip = $_SERVER['REMOTE_ADDR'];
 
-            $row = $db->GetAllData('cart', "cart_ip", $user_ip);
+            $query = mysqli_query($dbc,"SELECT * FROM `cart` WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'");
+ 
+            $cart_count = mysqli_num_rows($query);
 
+            $cart_row = mysqli_fetch_row($query);
 
             $product_ids = array();
 
-            for ($i = 0; $i < count($row); $i++) {
+            for ($i = 0; $i < $cart_count; $i++) {
                 $product_ids[$i] = $row[$i]['cart_product_id'];
             }
 
@@ -260,17 +243,22 @@ echo $orderNumber;
                     <div class="order-info-container container">
                         <div class="order-list">
                         <?php
-                for ($i = 0; $i < count($product_ids);$i++)
-                {
-                    $row = $db->GetAllData('akb','id',$product_ids[$i]);
 
-                    if($row[0]['available'] == 1) {
+                   
+              
+                    $query = mysqli_query($dbc,"SELECT * FROM cart,akb WHERE cart.cart_ip = '{$_SERVER['REMOTE_ADDR']}' AND akb.id = cart.cart_product_id");
 
-                    $imgpath = $row[0]["imgpath"];
-                    $headline = $row[0]["modelname"];
-                    $capacity = $row[0]['capacity'];
-                    $amperage = $row[0]['amperage'];
-                    $price = $row[0]['price'];
+                    $row = mysqli_fetch_array($query);
+
+                    do
+                    {
+                    if($row['available'] == 1) {
+
+                    $imgpath = $row["imgpath"];
+                    $headline = $row["modelname"];
+                    $capacity = $row['capacity'];
+                    $amperage = $row['amperage'];
+                    $price = $row['price'];
                     ?>
                             
                             <div class="order-list-element">
@@ -300,9 +288,9 @@ echo $orderNumber;
                             </div>
 
                             <?php 
-
                     }
-                }
+                } while($row = mysqli_fetch_array($query));
+                mysqli_close($dbc);
                 ?>
 
 

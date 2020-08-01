@@ -10,7 +10,8 @@ $('.incart-add-button').click(function () {
         cache: false,
         success: function (data) {
             loadCart();
-           
+
+          
         }
     });
 });
@@ -23,15 +24,7 @@ function loadCart()
         dataType: "html",
         cache: false,
         success: function (data) {
-            if(data === "0")
-            {
-                $('.bag-link').html("Корзина пуста");
-              
-            }
-            else {
-                $('.bag-link').html(data);
-           
-            }
+            
         }
     });
 
